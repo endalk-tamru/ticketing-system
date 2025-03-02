@@ -1,18 +1,18 @@
 const statusTags = {
   OPEN: {
     label: "Open",
-    color: "#000000",
-    bgColor: "#00b0ff",
+    color: "#ffffff",
+    bgColor: "#748cab",
   },
   IN_PROGRESS: {
     label: "In-progress",
     color: "#000000",
-    bgColor: "#ff9800",
+    bgColor: "#ffc857",
   },
   CLOSED: {
     label: "Closed",
     color: "#000000",
-    bgColor: "#4BCDC4",
+    bgColor: "#FF6B6B",
   },
 };
 

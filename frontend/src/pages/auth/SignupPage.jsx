@@ -50,7 +50,7 @@ export default function SignupPage() {
 
   return (
     <Container className="d-flex flex-column align-items-center justify-content-center mt-4">
-      <Card style={{ width: "25rem" }} className="p-4 shadow">
+      <Card style={{ width: "30rem" }} className="p-4 shadow">
         <Card.Title className="text-center">Sign Up</Card.Title>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">

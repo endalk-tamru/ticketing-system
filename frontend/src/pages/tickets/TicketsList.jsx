@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Card, Container, Table, Button, Stack } from "react-bootstrap";
+import { Card, Container, Table, Button, Stack, Badge } from "react-bootstrap";
 
 import {
   useDeleteTicketMutation,
@@ -9,6 +9,7 @@ import {
 import TicketForm from "./fragments/TicketForm";
 import DeleteModal from "../../components/DeleteModal";
 import UpdateTicketForm from "./fragments/UpdateTicketForm";
+import StatusBadge from "../../components/StatusBadge";
 
 export default function TicketsList() {
   const { userInfo } = useSelector((state) => state.auth);
@@ -62,7 +63,9 @@ export default function TicketsList() {
                 <td>{ticket.title}</td>
                 <td>{ticket.description}</td>
                 <td>{ticket.user?.username}</td>
-                <td>{ticket.status}</td>
+                <td>
+                  <StatusBadge status={ticket.status} />
+                </td>
                 <td>{new Date(ticket.createdAt)?.toLocaleString()}</td>
                 <td>
                   {(userInfo?._id === ticket?.user?._id ||
