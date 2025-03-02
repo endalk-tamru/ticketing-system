@@ -44,23 +44,7 @@ Start the backend and frontend using the following command:
 npm run dev
 ```
 
-The backend will run on the backend http://localhost:5000 and the frontend will run http://localhost:5173 or the port specified in your .env file.
-
-Start the frontend using the following command:
-
-```bash
-npm run client
-```
-
-The frontend will run on http://localhost:5173 or the port specified in your .env file.
-
-Start the server using the following command:
-
-```bash
-npm run server
-```
-
-The server will run on http://localhost:5000 or the port specified in your .env file.
+The backend will run on http://localhost:5000 and the frontend will run on http://localhost:5173 or the port specified in your .env file.
 
 ## **Important Notes**
 
@@ -69,4 +53,4 @@ The server will run on http://localhost:5000 or the port specified in your .env 
 
 - **Testing:**  
   Use tools like Postman to test API endpoints.
-  Documentation Link: https://documenter.getpostman.com/view/23024675/2sAYdimUYu
+  - Documentation Link: https://documenter.getpostman.com/view/23024675/2sAYdimUYu
