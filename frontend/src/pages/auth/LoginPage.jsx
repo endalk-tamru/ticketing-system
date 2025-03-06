@@ -43,7 +43,7 @@ export default function LoginPage() {
       <Card style={{ width: "30rem" }} className="p-4 shadow">
         <Card.Title className="text-center">Login</Card.Title>
         <Form onSubmit={handleSubmit}>
-          <Alert variant={"warning"}>
+          <Alert variant={"info"}>
             <p>To Login As Admin Use The Following Credentials:</p>
             <p>
               Username: <strong>admin</strong>

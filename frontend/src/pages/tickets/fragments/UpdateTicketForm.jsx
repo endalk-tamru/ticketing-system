@@ -52,6 +52,7 @@ export default function UpdateTicketForm({ showModal, setShowModal }) {
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
             <Form.Control
+              disabled={userInfo._id !== formData?.user?._id}
               name="title"
               type="text"
               value={formData?.title}
@@ -62,6 +63,7 @@ export default function UpdateTicketForm({ showModal, setShowModal }) {
           <Form.Group className="mb-3">
             <Form.Label>Description</Form.Label>
             <Form.Control
+              disabled={userInfo._id !== formData?.user?._id}
               name="description"
               as="textarea"
               placeholder="Description"

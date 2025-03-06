@@ -14,7 +14,9 @@ const updateUser = async (req, res) => {
 
   user.username = req?.body?.username || user.username;
   user.password = req?.body?.password || user.password;
-  user.isSuperAdmin = req?.body?.isSuperAdmin || user.isSuperAdmin;
+  user.isSuperAdmin = req.user.isSuperAdmin
+    ? req?.body?.isSuperAdmin
+    : user.isSuperAdmin;
 
   const updatedUser = await user.save();
 

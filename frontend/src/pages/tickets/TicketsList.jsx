@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Card, Container, Table, Button, Stack, Badge } from "react-bootstrap";
+import {
+  Card,
+  Container,
+  Table,
+  Button,
+  Stack,
+  Badge,
+  Alert,
+} from "react-bootstrap";
 
 import {
   useDeleteTicketMutation,
@@ -30,6 +38,12 @@ export default function TicketsList() {
 
   return (
     <Container className="mt-4">
+      <Alert variant={"info"}>
+        Users can update their own tickets, except for the status, while admins
+        have the authority to update ticket statuses. This validation is
+        enforced on the backend.
+      </Alert>
+
       <Card className="p-4 shadow">
         <Card.Title>
           <Stack direction="horizontal" gap={3}>
@@ -51,8 +65,8 @@ export default function TicketsList() {
               <th>Ticket</th>
               <th>Description</th>
               <th>Issued By</th>
-              <th>Created At</th>
               <th>Status</th>
+              <th>Created At</th>
               <th>Actions</th>
             </tr>
           </thead>

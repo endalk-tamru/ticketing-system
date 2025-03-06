@@ -33,9 +33,11 @@ export default function UpdateUserForm({ showModal, setShowModal }) {
 
     try {
       const res = await updateUser(formData).unwrap();
+
+      // loggedIn user updates his own data then change the global states too
       userInfo._id === formData._id &&
         dispatch(setCredentials({ ...res, token: userInfo.token }));
-      toast.success("Login Successful");
+      toast.success("Update Successful");
       setShowModal({ isOpen: false, data: null });
     } catch (err) {
       toast.error(err?.data?.message || err?.error);

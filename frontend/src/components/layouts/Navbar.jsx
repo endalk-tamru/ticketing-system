@@ -58,6 +58,14 @@ export default function NavBar() {
                 </Nav.Link>
               </>
             )}
+
+            <Nav.Link
+              as={Link}
+              to="https://documenter.getpostman.com/view/23024675/2sAYdimUYu"
+              target="_blank"
+            >
+              API Doc
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

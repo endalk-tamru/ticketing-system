@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Card, Container, Table, Button, Modal, Form } from "react-bootstrap";
+import {
+  Card,
+  Container,
+  Table,
+  Button,
+  Modal,
+  Form,
+  Alert,
+} from "react-bootstrap";
 
 import {
   useDeleteUserMutation,
@@ -7,6 +15,7 @@ import {
 } from "../../redux/apiSlices/usersApiSlice";
 import UpdateUserForm from "./fragments/UpdateUserForm";
 import DeleteModal from "../../components/DeleteModal";
+import StatusBadge from "../../components/StatusBadge";
 
 export default function UsersList() {
   const [showEditModal, setShowEditModal] = useState({
@@ -24,6 +33,11 @@ export default function UsersList() {
 
   return (
     <Container className="mt-4">
+      <Alert variant={"info"}>
+        Users can update their own username, while admins can modify user roles.
+        This validation is enforced on the backend.
+      </Alert>
+
       <Card className="p-4 shadow">
         <Card.Title>User List</Card.Title>
         <Table striped bordered hover className="mt-4">
@@ -40,7 +54,9 @@ export default function UsersList() {
               <tr key={user._id}>
                 <td>{index + 1}</td>
                 <td>{user.username}</td>
-                <td>{user.isSuperAdmin ? "Admin" : "User"}</td>
+                <td>
+                  <StatusBadge status={user.isSuperAdmin ? "Admin" : "User"} />
+                </td>
                 <td>
                   <Button
                     variant="warning"
