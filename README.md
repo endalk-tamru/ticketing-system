@@ -1,6 +1,8 @@
 ## **Getting Started**
 
-Follow these steps to set up the project locally:
+- Documentation Link: https://documenter.getpostman.com/view/23024675/2sAYdimUYu
+
+- Follow these steps to set up the project locally:
 
 ### **1. Clone the Repository**
 
@@ -53,4 +55,3 @@ The backend will run on http://localhost:5000 and the frontend will run on http:
 
 - **Testing:**  
   Use tools like Postman to test API endpoints.
-  - Documentation Link: https://documenter.getpostman.com/view/23024675/2sAYdimUYu
